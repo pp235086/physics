@@ -4,51 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Voltage Calculator</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      text-align: center;
-      margin: 0;
-      padding: 0;
-      background-color: #f9f9f9;
-    }
-    h1 {
-      margin-top: 20px;
-      color: #333;
-    }
-    .container {
-      max-width: 400px;
-      margin: 20px auto;
-      padding: 20px;
-      background: #fff;
-      border-radius: 10px;
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    }
-    input {
-      width: calc(100% - 20px);
-      padding: 10px;
-      margin: 10px 0;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-    }
-    button {
-      width: 100%;
-      padding: 10px;
-      background: #4caf50;
-      color: white;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-    button:hover {
-      background: #45a049;
-    }
-    .result {
-      margin-top: 20px;
-      font-size: 18px;
-      color: #333;
-    }
-  </style>
+  <link rel="stylesheet" href="styles.css"> <!-- เชื่อมไฟล์ CSS -->
 </head>
 <body>
   <h1>Voltage Calculator</h1>
@@ -63,21 +19,6 @@
     
     <div class="result" id="result">Result will appear here</div>
   </div>
-
-  <script>
-    // ฟังก์ชันสำหรับคำนวณแรงดันไฟฟ้า
-    function calculateVoltage() {
-      const current = parseFloat(document.getElementById("current").value);
-      const resistance = parseFloat(document.getElementById("resistance").value);
-
-      if (isNaN(current) || isNaN(resistance)) {
-        document.getElementById("result").innerText = "Please enter valid numbers!";
-        return;
-      }
-
-      const voltage = current * resistance;
-      document.getElementById("result").innerText = Voltage (V): ${voltage.toFixed(2)} V;
-    }
-  </script>
+  <script src="script.js"></script> <!-- เชื่อมไฟล์ JavaScript -->
 </body>
 </html>
